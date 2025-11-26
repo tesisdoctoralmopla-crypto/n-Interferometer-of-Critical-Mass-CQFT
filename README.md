@@ -1,44 +1,39 @@
-# Interferometer of Critical Mass CQFT: An Experimental Design to Measure the Quantum-Classical Boundary at 10^9 amu
+# Validation and Canonical Foundations of TCG-CS-F (Article II)
 
-## Project Overview
+## Project Overview: Unifying Quantum Collapse and Cosmic Dynamics
 
-This repository details the theoretical and experimental design for the **Critical Mass CQFT Interferometer**, an experiment proposed to test the fundamental validity of linear Quantum Mechanics (QM) and empirically validate the **Constitutive Quantum Field Theory (CQFT)**.
+This paper presents a rigorous consolidation of the **Constitutive Theory of Gravity (TCG-CS-F)**, a scalar-tensor framework designed to simultaneously resolve the quantum measurement problem, unify Dark Matter and Dark Energy, and explain intermediate-field anomalies. It establishes the canonical rigor and predictive economy of the TCG-CS-F model.
 
-The central goal is to probe the **Critical Collapse Mass** ($\mathbf{M_{cr} \approx 10^9 \text{ amu}}$), the exact threshold predicted by CQFT where spatial superposition spontaneously collapses, marking the transition from quantum to classical reality.
+The research's central claim is the **complete internal coherence** of the framework, cross-validated by providing two distinct, quantitative, and falsifiable predictions using a **single free parameter**.
 
-## Key Hypothesis: The Decoherence Cliff
+---
 
-Unlike standard **Objective Collapse Models (OCMs)** (like CSL), which predict a gradual, continuous decay of quantum coherence ($\mathbf{\Gamma_{\text{CSL}} \propto m^2}$), CQFT predicts a **sharp, non-adjustable threshold effect**: the **Decoherence Cliff**.
+## Canonical Foundations: Three Pillars of Consistency
 
-$$\mathbf{\Gamma_{\text{CQFT}}(M) \approx \begin{cases} 0 & \text{if } M < M_{cr} \\ \infty & \text{if } M \ge M_{cr} \end{cases}}$$
+TCG-CS-F is built upon three non-negotiable theoretical pillars to ensure **causal stability** and compliance with observational limits:
 
-Observing an abrupt collapse of interference visibility exactly at $\mathbf{M_{cr}}$ would falsify OCMs and validate CQFT.
+1.  **Causality:** Guaranteed by a **Canonical Kinetic Term** ($\mathbf{X}$).
+2.  **PPN Screening:** Ensured by a **Unique Screening Potential** ($\mathbf{V(\chi) = M^4/\chi}$) that hides Dark Matter effects in the Solar System.
+3.  **Galactic Dynamics:** Defined by a specific coupling exponent ($\mathbf{\alpha=3}$) necessary for flat galactic rotation curves.
 
-## Experimental Design
+---
 
-The experiment is based on an **Optical Tweezer Loop Interferometer** using levitated dielectric $\text{SiO}_2$ nanoparticles ($\mathbf{R \approx 5.7 \text{ nm}}$).
+## The Unique Coupling Constant: $\mathbf{\beta = 8.3 \times 10^{-5}}$
 
-| Parameter | Value | Requirement |
+The entire TCG-CS-F framework is governed by a **single phenomenological free constant** ($\mathbf{\beta}$), which calibrates the intensity of the Constitutive Thrust ($\mathbf{a}_{\Phi} \propto \beta$).
+
+| Domain | Phenomenon Explained | Validation |
 | :--- | :--- | :--- |
-| **Target Mass** | $\mathbf{M_{cr} \approx 10^9 \text{ amu}}$ | Four-order-of-magnitude leap from current records. |
-| **Coherence Time** | $\mathbf{T \approx 1 \text{ s}}$ | Necessary to observe the predicted $\mathbf{1 \text{ Hz}}$ collapse rate. |
-| **Vacuum Pressure** | $\mathbf{P \le 10^{-15} \text{ mbar}}$ | Essential for minimizing gas collisional decoherence ($\mathbf{\Gamma_{gas}}$). |
+| **Intermediate Field** | Non-Gravitational Comet Anomaly ($\mathbf{A_1}$) | Models $\mathbf{67\%}$ of the anomaly in 3I/ATLAS. |
+| **Quantum/Cosmic Link** | Dual Falsification Targets | Provides the scale for both $\mathbf{M_{cr}}$ and $\mathbf{f}$. |
 
-The protocol involves Ground State Cooling of the Center-of-Mass (CoM) motion, followed by a time-domain Mach-Zehnder sequence (Splitting, Free Evolution, Recombination).
+---
 
-## Simulation Code
+## Dual Falsifiability Strategy (The Two Fronts)
 
-The repository includes numerical simulation code to visualize the theoretical predictions, specifically contrasting the smooth decay of CSL against the sharp threshold of CQFT.
+The TCG-CS-F framework is uniquely testable through two independent empirical predictions:
 
-The Python script models fringe visibility ($\mathcal{V}$) as a function of the oscillator frequency, revealing the **Decoherence Cliff** at the predicted critical frequency: $\mathbf{f_{cr} = 96.7 \text{ MHz}}$ (equivalent to $\mathbf{M_{cr}}$).
+1.  **Quantum/Fundamental Test (CQFT):** Validated by the prediction of the **Critical Collapse Mass** ($\mathbf{M_{cr} = 10^9 \text{ amu}}$), the threshold for the **Decoherence Cliff**. This result is the core of the **Initial Work (Article I: The Interferometer Paper)**.
+2.  **Cosmological/Dark Matter Test:** The predicted **Haloscope Frequency** ($\mathbf{f = 96.7 \text{ MHz}}$) for the TCG Constitutive Field.
 
-## The Double Front Strategy
-
-This interferometer design serves as the **Quantum/Fundamental** test for CQFT. It complements the **Cosmological/Dark Matter** prediction ($\mathbf{f=96.7 \text{ MHz}}$) derived from the same unified framework (**TCG-CS-F**), which is linked by the single cosmological coupling constant $\mathbf{\beta = 8.3 \times 10^{-5}}$. Confirmation of both predictions would provide overwhelming evidence for the TCG/CQFT framework.
-
-## Author and Contact
-
-**Dr. Manuel Martín Morales Plaza**
-
-*Independent Researcher*
-*Contact: tesisdoctoral.mopla@gmail.com*
+The **Extreme Falsification Test** provides the ultimate boundary condition: the theory predicts a massive acceleration ($\mathbf{a}_{\text{predicted}} \approx \mathbf{1200 \times 10^{-8} \text{ au/day}^2}$) for comets with extreme perihelion ($\mathbf{q=0.1 \text{ au}}$). The **non-detection** of this effect would falsify $\mathbf{\beta}$ and the entire unified framework.
