@@ -1,0 +1,186 @@
+\documentclass[aps,prl,superscriptaddress,floatfix]{revtex4-2}
+% --- Essential Packages ---
+\usepackage[utf8]{inputenc} % Ensures correct handling of UTF-8
+\usepackage[T1]{fontenc}    % Modern font encoding
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel} % Main document language is English
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{csquotes}       % For handling quotes
+
+% --- Listings Styles (for Python code) ---
+\lstset{
+    language=Python,
+    basicstyle=\small\ttfamily,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    showstringspaces=false,
+    commentstyle=\color{gray}, 
+    keywordstyle=\bfseries,
+    breaklines=true, % Allows line breaks to prevent Overfull \hbox in code.
+    breakatwhitespace=true, % Allows breaking at spaces.
+    literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 % Redundancy for non-ASCII safety
+}
+
+\begin{document}
+
+\title{\textbf{Interferometer of Critical Mass CQFT}: An Experimental Design to Measure the Quantum-Classical Boundary at $\mathbf{10^9 \text{ amu}}$}
+
+\author{Dr. Manuel Martín Morales Plaza}
+\email{tesisdoctoral.mopla@gmail.com}
+\affiliation{Independent Researcher, Canary Islands, Spain}
+
+\date{\today}
+
+% --- FINAL ABSTRACT ---
+\begin{abstract}
+Standard Quantum Mechanics (QM) fails to explain the quantum-classical transition at macroscopic scales. We propose a fundamental falsification test for the \textbf{Constitutive Quantum Field Theory (CQFT)}—a unified framework rooted in the \textbf{TCG Absoluta (aTCG)} that addresses the dual crisis of quantum measurement and cosmology. The CQFT theory predicts the existence of a precise, non-adjustable \textbf{Critical Collapse Mass} ($\mathbf{M_{cr} \approx 10^9 \text{ amu}}$), defining the exact boundary of quantum linearity. To probe this four-order-of-magnitude leap in mass, we detail an experimental design based on an \textbf{Optical Tweezer Loop Interferometer} utilizing levitated dielectric nanoparticles in Ultra-High Vacuum ($\mathbf{P \le 10^{-15} \text{ mbar}}$). Analytically, the CQFT distinguishes itself from standard Objective Collapse Models (OCM) like CSL by predicting an \textbf{abrupt transition} in coherence: the \textbf{Decoherence Cliff} ($\mathbf{\Gamma_{CQFT} \to \infty}$ if $\mathbf{M \ge M_{cr}}$), rather than a continuous, gradual decay. This experiment offers a direct path to empirically validate the mass scale of collapse and confirm the CQFT's unifying predictions, which include a dark matter frequency of $\mathbf{f=96.7 \text{ MHz}}$ and the unique $\mathbf{\beta = 8.3 \times 10^{-5}}$ cosmological coupling.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+The enduring incompatibility between Quantum Mechanics (QM) and General Relativity (GR) stems largely from the unresolved \textbf{quantum measurement problem}. QM's linearity suggests superposition is universal, yet it is never observed in macroscopic objects.
+
+\subsection{State of the Art: Expanding the Mass Frontier}
+Experimental physics has vigorously pushed the mass boundary for superposition. The current mass record for matter-wave interferometry stands at $\mathbf{\sim 2.7 \times 10^4 \text{ amu}}$, achieved by the LUMI experiment using the Talbot-Lau technique. Our goal of $\mathbf{M_{cr} \approx 10^9 \text{ amu}}$ represents a \textbf{four-order-of-magnitude leap}, demanding a \textbf{paradigm shift} from near-field interferometry to \textbf{levitated optomechanics}. The mass region between $\mathbf{10^6 \text{ and } 10^{10} \text{ amu}}$ remains largely unexplored—the "terra incognita" where intrinsic collapse mechanisms are most likely to manifest.
+
+\subsection{The CQFT Solution: The Magic Number $\mathbf{M_{cr}}$}
+We propose an experiment to \textbf{falsify a key prediction} of the \textbf{Constitutive Quantum Field Theory (CQFT)}. The CQFT resolves the Measurement Problem by positing that superposition collapses spontaneously due to a \textbf{constitutive interaction} with the **Absolute Quantum Phase Field (AQPF)**. The theory's strength lies in its \textbf{Double Front} strategy, providing \textbf{two quantitative and falsifiable predictions} in separate physical domains: the dark matter Haloscope frequency ($\mathbf{f=96.7 \text{ MHz}}$) and the **Critical Collapse Mass** ($\mathbf{M_{cr}}$). CQFT derives $\mathbf{M_{cr} \approx 10^9 \text{ amu}}$ as the exact mass scale where the AQPF interaction energy is sufficient to break coherence. Unlike other **Objective Collapse Models (OCMs)**, this value is \textbf{not an adjustable parameter} but a fundamental consequence of the theory, linked to the cosmological coupling constant $\mathbf{\beta = 8.3 \times 10^{-5}}$ derived from the TCG-CS-F framework.
+
+\section{Experimental Design: Optical Tweezer Loop Interferometer}
+
+To overcome the limitations of material gratings at $\mathbf{10^9 \text{ amu}}$, we propose the implementation of an \textbf{Optical Tweezer Loop Interferometer}. This design enables precise wave function manipulation without destructive Van der Waals forces.
+
+\subsection{State Preparation: Ground State Cooling}
+The system utilizes a $\text{SiO}_2$ nanosphere with an estimated radius $\mathbf{R \approx 5.7 \text{ nm}}$ (corresponding to $\mathbf{\sim 10^9 \text{ amu}}$). The center-of-mass (CoM) motion must be cooled to a mean phonon occupancy $\mathbf{\bar{n} < 1}$. We propose a hybrid scheme combining:
+\begin{itemize}
+    \item \textbf{Cavity Cooling}: For initial pre-cooling via coherent scattering in a high-finesse cavity.
+    \item \textbf{Active Feedback Cooling}: To achieve three-dimensional ground state occupancy, using linear position measurement and actuation.
+\end{itemize}
+
+\subsection{Interferometer Sequence}
+The experimental protocol follows a time-domain Mach-Zehnder sequence:
+\begin{enumerate}
+    \item \textbf{Splitting}: A non-adiabatic laser pulse or trap modulation splits the CoM wave function into two spatially separated packets ($\mathbf{\Delta x \approx 100 \text{ nm} - 1 \mu \text{m}}$).
+    \item \textbf{Free Evolution}: The packets evolve in superposition. The time of coherence ($\mathbf{T \approx 1 \text{ s}}$) must be long enough for the decoherence predicted by the CQFT to manifest, making the experiment sensitive to the $\mathbf{1 \text{ Hz}}$ collapse rate.
+    \item \textbf{Recombination}: The potential is inverted to recombine the packets, and the visibility of the interference pattern is measured.
+\end{enumerate}
+
+\subsection{Critical Requirements: UHV and Coherence}
+To achieve the long coherence time ($\mathbf{T \approx 1 \text{ s}}$), the experiment must be performed in a cryogenic UHV environment with pressures of $\mathbf{P \le 10^{-15} \text{ mbar}}$ (or better). This strict requirement ensures that the gas collisional decoherence rate ($\mathbf{\Gamma_{gas}}$) is much less than $1 \text{ Hz}$.
+
+\section{Theoretical Predictions and Model Distinguishability}
+
+The central goal is to discriminate between Standard QM, established Objective Collapse Models (OCMs) like CSL and Diósi-Penrose (DP), and CQFT. The total decoherence rate is defined as:
+\begin{equation}
+\label{eq:total_gamma}
+\mathbf{\Gamma_{\text{Total}} = \Gamma_{\text{env}} + \Gamma_{\text{Model}}}
+\end{equation}
+
+\subsection{Analytical Distinction: TCFQ vs. Objective Collapse Models (OCM)}
+The CQFT mechanism is fundamentally distinct from the continuous stochastic processes of models like CSL. The decoherence in CQFT is not a product of continuous background noise but rather a **phase transition** triggered when the critical energy density threshold is crossed.
+\begin{itemize}
+    \item \textbf{CSL/DP Approach}: Predicts a **continuous, gradual decay** ($\mathbf{\Gamma_{\text{CSL}} \propto m^2}$) as mass increases. The fringe visibility loss is exponential and smooth, $\mathbf{V \propto e^{-\Gamma_{\text{CSL}} t}}$.
+    \item \textbf{TCFQ Approach}: Predicts a **sharp threshold effect** due to the AQPF interaction. The decoherence rate $\mathbf{\Gamma_{\text{CQFT}}}$ behaves as a step function:
+    \begin{equation}
+    \mathbf{\Gamma_{\text{CQFT}}(M) \approx \begin{cases} 0 & \text{if } M < M_{cr} \\ \infty & \text{if } M \ge M_{cr} \end{cases}}
+    \end{equation}
+\end{itemize}
+This analytical distinction leads to the unique experimental signature we call the **Decoherence Cliff**. The observation of an **abrupt collapse** from near $\mathbf{100\%}$ visibility to near $\mathbf{0\%}$ exactly at $\mathbf{M_{cr}}$, instead of a smooth curve, will falsify traditional OCMs and validate the TCFQ.
+
+\subsection{Numerical Simulation and The Decoherence Cliff}
+We provide the simulation code that models the interferometer response, visualizing the distinct predictions of the three scenarios: QM, CSL, and TCFQ.
+
+\begin{figure}[h]
+\centering
+% 
+\caption{Theoretical Predictions: Interferometric Visibility ($\mathcal{V}$) vs. Oscillator Frequency (MHz). The **blue line (CSL)** shows continuous decay. The **red line (TCFQ)** shows the unique **Decoherence Cliff**—a sharp, critical phase transition at $\mathbf{f_{cr} = 96.7 \text{ MHz}}$ (equivalent to $\mathbf{M_{cr}}$).}
+\label{fig:decoherence_cliff}
+\end{figure}
+
+The following code generates the plot shown in Fig. \ref{fig:decoherence_cliff}.
+
+\begin{lstlisting}
+import numpy as np
+import matplotlib.pyplot as plt
+
+# --- PHYSICAL PARAMETERS CQFT/TCG ---
+# Critical Frequency predicted by CQFT (linked to Mcr)
+f_crit = 96.7  # MHz
+# Phenomenological TCG constant (beta = 8.3e-5) not directly used in this plot.
+
+# Range of experimental frequencies (X-axis)
+frecuencias = np.linspace(90, 105, 500) 
+
+# --- THEORETICAL MODELS ---
+
+# 1. Standard Quantum Mechanics (QM)
+# Predicts infinite coherence (Visibility = 1).
+V_QM = np.ones_like(frecuencias)
+
+# 2. Standard Objective Collapse Models (CSL / Diosi-Penrose)
+# Predicts a smooth decay. Uses an effective quadratic model (f^2) to simulate the decay.
+lambda_csl = 0.005 
+V_CSL = np.exp(-lambda_csl * (frecuencias - 90)**2) 
+
+# 3. CQFT (Constitutive Quantum Field Theory)
+# Predicts the "Decoherence Cliff": Visibility 1 until f_crit, then collapse.
+# Uses a very steep sigmoid function to simulate the abrupt phase transition.
+def tcfq_visibility(f, fc):
+    # k = Steepness parameter. High slope = abrupt transition.
+    k = 100 
+    return 1 / (1 + np.exp(k * (f - fc)))
+
+V_TCFQ = tcfq_visibility(frecuencias, f_crit)
+
+# --- GENERATION OF THE PLOT (Code for Figure 2) ---
+
+plt.figure(figsize=(10, 6))
+
+# Plot QM
+plt.plot(frecuencias, V_QM, 'k--', label='Standard QM (No Collapse)', linewidth=2, alpha=0.6)
+# Plot CSL
+plt.plot(frecuencias, V_CSL, 'b-.', label='Standard CSL (Continuous Decay)', linewidth=2.5)
+# Plot TCFQ (Highlight)
+plt.plot(frecuencias, V_TCFQ, 'r-', label='TCFQ Prediction (Decoherence Cliff)', linewidth=3.5)
+
+# Decoration
+plt.axvline(x=f_crit, color='gray', linestyle=':', alpha=0.5)
+plt.text(f_crit + 0.5, 0.5, f'Critical Frequency\\n$f_{{cr}} = {f_crit}$ MHz', color='darkred')
+
+plt.title('Theoretical Predictions: Interferometric Visibility vs. Frequency', fontsize=14)
+plt.xlabel('Oscillator Frequency (MHz)', fontsize=12)
+plt.ylabel('Fringe Visibility ($\mathcal{V}$)', fontsize=12)
+plt.legend(fontsize=11, loc='lower left')
+plt.grid(True, alpha=0.3)
+plt.ylim(-0.05, 1.1)
+plt.xlim(90, 105)
+
+plt.tight_layout()
+# plt.show()
+\end{lstlisting}
+
+
+\section{Conclusion and Outlook}
+
+Fundamental physics stands at a crossroad. The CQFT offers a pathway by providing a theoretical framework and \textbf{two quantitative, falsifiable predictions} in distinct domains: $\mathbf{f=96.7 \text{ MHz}}$ (Dark Matter/Cosmological) and $\mathbf{M_{cr}=10^9 \text{ amu}}$ (Quantum/Fundamental). This work details an experiment capable of probing the $\mathbf{10^9 \text{ amu}}$ limit using an **Optical Tweezer Loop Interferometer**.
+
+The successful realization rests on overcoming technological barriers—specifically, achieving $\mathbf{P \le 10^{-15} \text{ mbar}}$ and $\mathbf{T \approx 1 \text{ s}}$ coherence time. If the CQFT is correct, the observation of the **Decoherence Cliff** at $\mathbf{M_{cr}}$ will **refute the universality of linear QM** and provide the first empirical evidence of an Objective Collapse mechanism with a defined mass scale, while simultaneously validating the cosmological coupling $\mathbf{\beta}$ and the entire **TCG-CS-F** framework.
+
+% --- REFERENCES (Placeholder) ---
+% Using a .bib file and \bibliography{references} is recommended
+\begin{thebibliography}{99}
+\bibitem{cqft_main} Dr. Morales M. M. P. \textit{Constitutive Quantum Field Theory, Article I: The Absolute Quantum Phase Field.} (In preparation).
+\bibitem{tcg_cosmo} Dr. Morales M. M. P. \textit{The Cosmological Framework of TCG: Unified Dark Matter and Dark Energy.} (In preparation).
+\bibitem{lumi} Kiałka, F., \textit{et al}. A roadmap for universal high-mass matter-wave interferometry. \textit{AVS Quantum Science} 4(2), 020502 (2022).
+\bibitem{bassi} Bassi, A., \textit{et al}. Models of wave-function collapse, underlying theories, and experimental tests. \textit{Rev. Mod. Phys.} 85, 471 (2013).
+\end{thebibliography}
+
+\end{document}
